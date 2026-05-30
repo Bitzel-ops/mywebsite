@@ -9,7 +9,7 @@
   <style>
 
     /* ─── VARIABLES ─────────────────────────────────────────── */
-    :root {
+    :root { color-scheme: light;
       --bg:           #f4f6f9;
       --surface:      #ffffff;
       --surface2:     #eef1f6;
@@ -907,8 +907,12 @@
     html.setAttribute('data-theme', isDark ? 'light' : 'dark');
     localStorage.setItem('theme', isDark ? 'light' : 'dark');
   }
-  if (localStorage.getItem('theme') === 'dark') {
-    document.documentElement.setAttribute('data-theme', 'dark');
+  const saved = localStorage.getItem('theme');
+  if (saved) {
+  document.documentElement.setAttribute('data-theme', saved);
+  } else {
+  document.documentElement.setAttribute('data-theme', 'light');
+  localStorage.setItem('theme', 'light');
   }
 
   /* ── Email obfuscation ── */
