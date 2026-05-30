@@ -9,7 +9,8 @@
   <style>
 
     /* ─── VARIABLES ─────────────────────────────────────────── */
-    :root { color-scheme: light;
+    :root {
+      color-scheme: light;
       --bg:           #f4f6f9;
       --surface:      #ffffff;
       --surface2:     #eef1f6;
@@ -31,7 +32,7 @@
       --nav-h:        64px;
     }
     [data-theme="dark"] {
-      color-scheme: dark;  
+      color-scheme: dark;
       --bg:           #111827;
       --surface:      #1e293b;
       --surface2:     #263247;
@@ -79,8 +80,6 @@
       flex-shrink: 0;
     }
     .nav-logo span { color: var(--accent); }
-
-    /* Desktop nav links */
     .nav-links { display: flex; align-items: center; gap: 0.15rem; list-style: none; }
     .nav-links a {
       text-decoration: none; color: var(--text2); font-size: 0.875rem;
@@ -89,14 +88,12 @@
     }
     .nav-links a:hover,
     .nav-links a.active { color: var(--accent); background: var(--accent-light); }
-
     .nav-right { display: flex; align-items: center; gap: 0.75rem; flex-shrink: 0; }
 
-    /* Hamburger button — hidden on desktop */
+    /* Hamburger — hidden on desktop */
     .nav-burger {
-      display: none;
-      flex-direction: column; gap: 5px; cursor: pointer;
-      background: none; border: none; padding: 4px;
+      display: none; flex-direction: column; gap: 5px;
+      cursor: pointer; background: none; border: none; padding: 4px;
     }
     .nav-burger span {
       display: block; width: 22px; height: 2px;
@@ -120,8 +117,7 @@
     .nav-drawer a {
       text-decoration: none; color: var(--text2); font-size: 1rem;
       padding: 0.65rem 0.75rem; border-radius: 8px;
-      transition: color 0.2s, background 0.2s; cursor: pointer;
-      white-space: nowrap;
+      transition: color 0.2s, background 0.2s; cursor: pointer; white-space: nowrap;
     }
     .nav-drawer a:hover,
     .nav-drawer a.active { color: var(--accent); background: var(--accent-light); }
@@ -131,7 +127,7 @@
       padding: 0.5rem 0.75rem; font-size: 0.85rem; color: var(--text3);
     }
 
-    /* ─── THEME TOGGLE SWITCH ───────────────────────────────── */
+    /* ─── THEME TOGGLE ──────────────────────────────────────── */
     .theme-toggle {
       display: flex; align-items: center; gap: 0.5rem;
       font-size: 0.78rem; color: var(--text3); user-select: none; cursor: pointer;
@@ -152,13 +148,11 @@
     }
     [data-theme="dark"] .toggle-thumb { transform: translateX(18px); background: var(--accent); }
 
-    /* ─── RESPONSIVE NAV BREAKPOINTS ───────────────────────── */
-    /* Tablet: hide text labels on toggle, shrink padding */
+    /* ─── RESPONSIVE BREAKPOINTS ────────────────────────────── */
     @media (max-width: 860px) {
       .nav-links a { padding: 0.4rem 0.5rem; font-size: 0.82rem; }
       .theme-toggle-label { display: none; }
     }
-    /* Mobile: hide desktop links, show burger */
     @media (max-width: 660px) {
       .nav-links { display: none; }
       .nav-burger { display: flex; }
@@ -217,16 +211,13 @@
     }
     .hero-text { flex: 1; min-width: 260px; }
     .hero-eyebrow {
-      font-family: 'Lora', serif;
-      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-      font-weight: 500; letter-spacing: 0.01em;
-      color: var(--accent); margin-bottom: 0.5rem;
+      font-family: 'Lora', serif; font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+      font-weight: 500; letter-spacing: 0.01em; color: var(--accent); margin-bottom: 0.5rem;
     }
     .hero-name {
-      font-family: 'DM Sans', sans-serif;
-      font-size: clamp(1.2rem, 3vw, 1.75rem);
-      font-weight: 300; line-height: 1.2;
-      color: var(--text2); margin-bottom: 0.6rem; letter-spacing: 0.02em;
+      font-family: 'DM Sans', sans-serif; font-size: clamp(1.2rem, 3vw, 1.75rem);
+      font-weight: 300; line-height: 1.2; color: var(--text2);
+      margin-bottom: 0.6rem; letter-spacing: 0.02em;
     }
     .hero-title { font-size: 0.9rem; color: var(--text3); margin-bottom: 1.5rem; letter-spacing: 0.03em; }
     .hero-bio { font-size: 1rem; color: var(--text2); line-height: 1.8; max-width: 520px; margin-bottom: 2rem; }
@@ -242,15 +233,12 @@
     }
     .hero-avatar:hover { box-shadow: 0 0 0 6px var(--surface), 0 0 0 9px var(--accent), var(--shadow); }
     .hero-avatar img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
-
-    /* Stack on small screens */
     @media (max-width: 600px) {
       .hero { padding: 3rem 0 2.5rem; }
       .hero-inner { flex-direction: column-reverse; align-items: center; gap: 2rem; text-align: center; }
       .hero-avatar { width: 160px; height: 160px; }
       .hero-cta { justify-content: center; }
     }
-
     .hero-banner { background: var(--surface); border-top: 1px solid var(--border); padding: 1.5rem 0; }
     .hero-stats {
       max-width: 960px; margin: 0 auto; padding: 0 1.5rem;
@@ -334,7 +322,7 @@
       display: inline-flex; align-items: center; gap: 0.3rem; font-size: 0.82rem;
       color: var(--text3); margin-top: auto; padding-top: 0.5rem; border-top: 1px solid var(--border);
     }
-    .ig  { background: #fce4ec; } .yt { background: #ffebee; } .fb { background: #e8f0fb; }
+    .ig { background: #fce4ec; } .yt { background: #ffebee; } .fb { background: #e8f0fb; }
     [data-theme="dark"] .ig { background: #2a1520; }
     [data-theme="dark"] .yt { background: #2a0d0d; }
     [data-theme="dark"] .fb { background: #1a2d45; }
@@ -360,19 +348,15 @@
     }
     .gallery-item:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
     .gallery-item:hover img { transform: scale(1.06); }
-    /* Overlay with solid background so text never bleeds into photo */
     .gallery-overlay {
-      position: absolute; inset: 0;
+      position: absolute; inset: 0; background: rgba(20,30,50,0.55);
       display: flex; align-items: center; justify-content: center;
       opacity: 0; transition: opacity 0.25s;
-      background: rgba(20, 30, 50, 0.55);
     }
     .gallery-overlay span {
-      color: #fff; font-size: 0.85rem; font-weight: 500;
-      letter-spacing: 0.06em;
-      background: rgba(0,0,0,0.35);
-      padding: 0.3rem 0.8rem; border-radius: 20px;
-      backdrop-filter: blur(4px);
+      color: #fff; font-size: 0.85rem; font-weight: 500; letter-spacing: 0.06em;
+      background: rgba(0,0,0,0.35); padding: 0.3rem 0.8rem;
+      border-radius: 20px; backdrop-filter: blur(4px);
     }
     .gallery-item:hover .gallery-overlay { opacity: 1; }
 
@@ -389,14 +373,11 @@
       transition: opacity 0.2s; background: none; border: none;
     }
     .lightbox-close:hover { opacity: 1; }
-    /* Caption with solid pill so it's always readable */
     .lightbox-caption {
       position: absolute; bottom: 1.75rem; left: 50%; transform: translateX(-50%);
       color: #fff; font-size: 0.85rem; white-space: nowrap;
-      background: rgba(10,15,25,0.65);
-      padding: 0.35rem 1rem; border-radius: 20px;
-      backdrop-filter: blur(6px);
-      max-width: 90vw; overflow: hidden; text-overflow: ellipsis;
+      background: rgba(10,15,25,0.65); padding: 0.35rem 1rem; border-radius: 20px;
+      backdrop-filter: blur(6px); max-width: 90vw; overflow: hidden; text-overflow: ellipsis;
     }
 
     /* ─── CONTACT ───────────────────────────────────────────── */
@@ -446,14 +427,22 @@
     .form-privacy { font-size: 0.75rem; color: var(--text3); margin-top: 0.75rem; line-height: 1.5; }
 
   </style>
+
+  <!-- ─── THEME INIT — runs before paint to prevent flash ───── -->
+  <script>
+    (function() {
+      const saved = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-theme', saved);
+      localStorage.setItem('theme', saved);
+    })();
+  </script>
+
 </head>
 <body>
 
 <!-- ─── NAV ──────────────────────────────────────────────────── -->
 <nav>
   <a class="nav-logo" href="#" onclick="showPage('home')">Alexander <span>Betzien</span></a>
-
-  <!-- Desktop links -->
   <ul class="nav-links">
     <li><a onclick="showPage('home')"    class="active" id="nav-home">Home</a></li>
     <li><a onclick="showPage('about')"   id="nav-about">About</a></li>
@@ -461,17 +450,12 @@
     <li><a onclick="showPage('gallery')" id="nav-gallery">Gallery</a></li>
     <li><a onclick="showPage('contact')" id="nav-contact">Contact</a></li>
   </ul>
-
   <div class="nav-right">
-    <!-- Desktop theme toggle -->
     <label class="theme-toggle" title="Toggle dark / light mode">
       <span class="theme-toggle-label">Light</span>
-      <div class="toggle-track" onclick="toggleTheme()">
-        <div class="toggle-thumb"></div>
-      </div>
+      <div class="toggle-track" onclick="toggleTheme()"><div class="toggle-thumb"></div></div>
       <span class="theme-toggle-label">Dark</span>
     </label>
-    <!-- Mobile burger -->
     <button class="nav-burger" id="navBurger" aria-label="Open menu" onclick="toggleDrawer()">
       <span></span><span></span><span></span>
     </button>
@@ -502,14 +486,17 @@
       <div class="hero-text">
         <p class="hero-eyebrow">IT Support Specialist</p>
         <h1 class="hero-name">Alexander Betzien</h1>
-        <p class="hero-title">IT Support · Motorbike Rider · Traveler</p>
+        <p class="hero-title">IT Support / Motorbike Rider / Traveler</p>
         <p class="hero-bio">
-          Welcome to my personal website. I'm an IT Helpdesk &amp; System Operations specialist focused on
-          solving technical challenges, assisting users, and helping organisations keep their IT environments
-          running smoothly.
-          <br><br>
-          Outside of work, I enjoy exploring new places by motorbike, traveling, and creating content that
-          captures the scenery and experiences I encounter along the way.
+         Hi, I'm Alex.
+         I'm an IT professional from Germany who ended up building a life in Thailand. 
+         For the past 10 years, I've worked with people and technology, helping users overcome technical 
+         challenges and keeping things moving behind the scenes.
+        <br><br>
+        When I'm not at a desk, there's a good chance I'm somewhere on a motorcycle, exploring roads I've never taken before
+        or searching for the next interesting place to visit.
+        <br><br>
+        Thanks for stopping by :)
         </p>
         <div class="hero-cta">
           <button class="btn btn-primary" onclick="showPage('contact')">Get In Touch</button>
@@ -521,7 +508,6 @@
       </div>
     </div>
   </section>
-
   <div class="hero-banner">
     <div class="hero-stats">
       <div class="stat-item"><div class="stat-num">IT</div><div class="stat-label">Support Specialist</div></div>
@@ -530,7 +516,6 @@
       <div class="stat-item"><div class="stat-num">🌍</div><div class="stat-label">Based in Thailand</div></div>
     </div>
   </div>
-
   <section class="home-cards">
     <div class="container">
       <div class="cards-grid">
@@ -552,9 +537,8 @@
       </div>
     </div>
   </section>
-
   <footer><p>© 2026 Alexander Betzien · Built with care · <a onclick="showPage('impressum')">Legal Notice</a></p></footer>
-</div>
+</div><!-- /page-home -->
 
 <!-- ─── ABOUT ─────────────────────────────────────────────────── -->
 <div class="page" id="page-about">
@@ -567,13 +551,45 @@
     <div class="container">
       <div class="about-grid">
         <div class="about-text">
-          <h2>Hi, I'm Alexander — an IT Support professional currently living in Thailand.</h2>
-          <p>Originally from Germany, I've been living and working in Thailand for several years while continuing to build my experience in IT support and operations.</p>
-          <p>Over the years, I've worked in fast-paced environments where reliability, communication, and problem-solving are essential. My work has included assisting users, resolving technical issues, managing devices, and helping ensure that daily operations continue without interruption.</p>
-          <p>What I enjoy most about IT is the combination of technology and people. Whether it's diagnosing a technical problem or helping someone regain access to a critical system, I find satisfaction in turning challenges into practical solutions.</p>
-          <p>Patience, clear communication, and a calm approach are often just as important as technical knowledge — especially when someone is already frustrated by an issue.</p>
-          <p>Outside of work, I spend much of my time exploring Thailand by motorbike, discovering new roads and places along the way. I've also developed an interest in photography and video creation, documenting landscapes, rides, and memorable moments from my travels.</p>
-          <p>I'm naturally curious and enjoy learning new things — both in technology and in everyday life.</p>
+          <h2>Thanks for stopping by. Here's a little more about my background, career, and some of the interests that keep me busy outside of work.</h2>
+          <p>
+            Originally from Germany, I've been living and working in Thailand for over 7 years.
+            What started as an adventure became a place I now call home.
+            During that time, I've continued building my career in IT while also getting to experience a very different way of life.
+            I've come to appreciate the friendliness of the people, the culture, and the more relaxed pace of everyday life here.
+          </p>
+          <p>
+            I currently work as a <strong>Client and Applications Administrator</strong>, where I spend most of my day helping users with technical issues, 
+            troubleshooting problems, and making sure things keep running as they should. 
+            Over the past 10 years, I've <strong>supported more than 2,000 users</strong> across multiple countries using Windows, Linux, and macOS systems.
+          </p>
+          <p>
+            What keeps IT interesting to me is the variety. No two days are exactly the same.
+            Some days are straightforward, while others send you down a rabbit hole trying to track down the cause of a problem.
+            I've had days where a single printer managed to consume several hours before finally deciding to cooperate again.
+            Over the past 7 years, I've <strong>handled around 140 to 180 tickets per month</strong>, while also supporting projects,
+            maintaining documentation and helping users better understand the tools they work with every day.
+          </p>
+          <p>
+            Over the years, I've found that good IT support is about more than just fixing technical problems.
+            People are often already frustrated when something isn't working, so taking the time to listen, explain things clearly, 
+            and stay calm can be just as important as finding the solution itself.
+          </p>
+          <p>
+            A gap year in Australia took me far away from office environments and computer screens. 
+            While working on livestock farms, I quickly learned that animals don't care about schedules, weekends, or whether you've already had a long day.
+            There were times when a job simply needed to be finished before you could call it a day. 
+            Looking back, that experience strengthened my work ethic and taught me the importance of being dependable, 
+            especially when other people are counting on you.
+          </p>
+          <p>
+           When I'm not behind a computer, there's a good chance I'm out on my motorcycle somewhere around Chiang Mai. 
+           Sometimes it's a ride through the city at night, other times it's a trip into the mountains or along quiet country roads 
+           with no real destination in mind.
+
+           I enjoy the freedom of being able to pick a direction, hit the road, and see where it leads.
+
+          </p>
 
           <div class="section-divider"></div>
           <h2>Skills &amp; Tools</h2>
@@ -587,6 +603,7 @@
               <span class="skill-tag">Remote Support</span>
               <span class="skill-tag">Device Management</span>
               <span class="skill-tag">Relational Databases</span>
+              <span class="skill-tag">CompTIA A+</span>
             </div>
           </div>
           <div class="skill-group">
@@ -651,7 +668,7 @@
     </div>
   </section>
   <footer><p>© 2026 Alexander Betzien · Built with care · <a onclick="showPage('impressum')">Legal Notice</a></p></footer>
-</div>
+</div><!-- /page-about -->
 
 <!-- ─── SOCIAL ────────────────────────────────────────────────── -->
 <div class="page" id="page-social">
@@ -691,7 +708,7 @@
     </div>
   </section>
   <footer><p>© 2026 Alexander Betzien · Built with care · <a onclick="showPage('impressum')">Legal Notice</a></p></footer>
-</div>
+</div><!-- /page-social -->
 
 <!-- ─── GALLERY ───────────────────────────────────────────────── -->
 <div class="page" id="page-gallery">
@@ -703,76 +720,43 @@
   <section>
     <div class="container">
       <div class="gallery-grid">
-
         <div class="gallery-item" onclick="openLightbox('images/pic1.jpg',  'Enjoying the sun')">
-          <img src="images/pic1.jpg"  alt="Enjoying the sun">
-          <div class="gallery-overlay"><span>🔍 View</span></div></div>
-
+          <img src="images/pic1.jpg"  alt="Enjoying the sun"><div class="gallery-overlay"><span>🔍 View</span></div></div>
         <div class="gallery-item" onclick="openLightbox('images/pic2.jpeg', 'Doing my PADI Open Water')">
-          <img src="images/pic2.jpeg" alt="Doing my PADI Open Water">
-          <div class="gallery-overlay"><span>🔍 View</span></div></div>
-
+          <img src="images/pic2.jpeg" alt="Doing my PADI Open Water"><div class="gallery-overlay"><span>🔍 View</span></div></div>
         <div class="gallery-item" onclick="openLightbox('images/pic3.jpg',  'The beauty of Khao Sok National Park')">
-          <img src="images/pic3.jpg"  alt="The beauty of Khao Sok National Park">
-          <div class="gallery-overlay"><span>🔍 View</span></div></div>
-
+          <img src="images/pic3.jpg"  alt="The beauty of Khao Sok National Park"><div class="gallery-overlay"><span>🔍 View</span></div></div>
         <div class="gallery-item" onclick="openLightbox('images/pic4.jpg',  'Meet my dad')">
-          <img src="images/pic4.jpg"  alt="Meet my dad">
-          <div class="gallery-overlay"><span>🔍 View</span></div></div>
-
+          <img src="images/pic4.jpg"  alt="Meet my dad"><div class="gallery-overlay"><span>🔍 View</span></div></div>
         <div class="gallery-item" onclick="openLightbox('images/pic5.jpg',  'Always making friends along the way')">
-          <img src="images/pic5.jpg"  alt="Always making friends along the way">
-          <div class="gallery-overlay"><span>🔍 View</span></div></div>
-
+          <img src="images/pic5.jpg"  alt="Always making friends along the way"><div class="gallery-overlay"><span>🔍 View</span></div></div>
         <div class="gallery-item" onclick="openLightbox('images/pic6.jpg',  'My company car')">
-          <img src="images/pic6.jpg"  alt="My company car">
-          <div class="gallery-overlay"><span>🔍 View</span></div></div>
-
+          <img src="images/pic6.jpg"  alt="My company car"><div class="gallery-overlay"><span>🔍 View</span></div></div>
         <div class="gallery-item" onclick="openLightbox('images/pic7.jpg',  'Relaxed Saturday ride to the lake')">
-          <img src="images/pic7.jpg"  alt="Relaxed Saturday ride to the lake">
-          <div class="gallery-overlay"><span>🔍 View</span></div></div>
-
+          <img src="images/pic7.jpg"  alt="Relaxed Saturday ride to the lake"><div class="gallery-overlay"><span>🔍 View</span></div></div>
         <div class="gallery-item" onclick="openLightbox('images/pic8.jpg',  'Me and Mr. Ferret')">
-          <img src="images/pic8.jpg"  alt="Me and Mr. Ferret">
-          <div class="gallery-overlay"><span>🔍 View</span></div></div>
-
+          <img src="images/pic8.jpg"  alt="Me and Mr. Ferret"><div class="gallery-overlay"><span>🔍 View</span></div></div>
         <div class="gallery-item" onclick="openLightbox('images/pic9.jpg',  '#Lieblingsbruder')">
-          <img src="images/pic9.jpg"  alt="#Lieblingsbruder">
-          <div class="gallery-overlay"><span>🔍 View</span></div></div>
-
+          <img src="images/pic9.jpg"  alt="#Lieblingsbruder"><div class="gallery-overlay"><span>🔍 View</span></div></div>
         <div class="gallery-item" onclick="openLightbox('images/pic10.jpg', 'I forgot how much fun ice skating is')">
-          <img src="images/pic10.jpg" alt="I forgot how much fun ice skating is">
-          <div class="gallery-overlay"><span>🔍 View</span></div></div>
-
+          <img src="images/pic10.jpg" alt="I forgot how much fun ice skating is"><div class="gallery-overlay"><span>🔍 View</span></div></div>
         <div class="gallery-item" onclick="openLightbox('images/pic11.jpg', 'and my mum')">
-          <img src="images/pic11.jpg" alt="and my mum">
-          <div class="gallery-overlay"><span>🔍 View</span></div></div>
-
+          <img src="images/pic11.jpg" alt="and my mum"><div class="gallery-overlay"><span>🔍 View</span></div></div>
         <div class="gallery-item" onclick="openLightbox('images/pic12.jpg', 'My loved one')">
-          <img src="images/pic12.jpg" alt="My loved one">
-          <div class="gallery-overlay"><span>🔍 View</span></div></div>
-
+          <img src="images/pic12.jpg" alt="My loved one"><div class="gallery-overlay"><span>🔍 View</span></div></div>
         <div class="gallery-item" onclick="openLightbox('images/pic13.jpg', 'Meet my gang')">
-          <img src="images/pic13.jpg" alt="Meet my gang">
-          <div class="gallery-overlay"><span>🔍 View</span></div></div>
-
+          <img src="images/pic13.jpg" alt="Meet my gang"><div class="gallery-overlay"><span>🔍 View</span></div></div>
         <div class="gallery-item" onclick="openLightbox('images/pic14.jpg', 'Took a chance to fly!')">
-          <img src="images/pic14.jpg" alt="Took a chance to fly!">
-          <div class="gallery-overlay"><span>🔍 View</span></div></div>
-
+          <img src="images/pic14.jpg" alt="Took a chance to fly!"><div class="gallery-overlay"><span>🔍 View</span></div></div>
         <div class="gallery-item" onclick="openLightbox('images/pic15.jpg', 'Good memories')">
-          <img src="images/pic15.jpg" alt="Good memories">
-          <div class="gallery-overlay"><span>🔍 View</span></div></div>
-
+          <img src="images/pic15.jpg" alt="Good memories"><div class="gallery-overlay"><span>🔍 View</span></div></div>
         <div class="gallery-item" onclick="openLightbox('images/pic16.jpg', 'At the right place at the right time')">
-          <img src="images/pic16.jpg" alt="At the right place at the right time">
-          <div class="gallery-overlay"><span>🔍 View</span></div></div>
-
+          <img src="images/pic16.jpg" alt="At the right place at the right time"><div class="gallery-overlay"><span>🔍 View</span></div></div>
       </div>
     </div>
   </section>
   <footer><p>© 2026 Alexander Betzien · Built with care · <a onclick="showPage('impressum')">Legal Notice</a></p></footer>
-</div>
+</div><!-- /page-gallery -->
 
 <!-- ─── CONTACT ───────────────────────────────────────────────── -->
 <div class="page" id="page-contact">
@@ -823,7 +807,7 @@
     </div>
   </section>
   <footer><p>© 2026 Alexander Betzien · Built with care · <a onclick="showPage('impressum')">Legal Notice</a></p></footer>
-</div>
+</div><!-- /page-contact -->
 
 <!-- ─── IMPRESSUM ─────────────────────────────────────────────── -->
 <div class="page" id="page-impressum">
@@ -858,7 +842,7 @@
     </div>
   </section>
   <footer><p>© 2026 Alexander Betzien · Built with care · <a onclick="showPage('impressum')">Legal Notice</a></p></footer>
-</div>
+</div><!-- /page-impressum -->
 
 <!-- ─── LIGHTBOX ──────────────────────────────────────────────── -->
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
@@ -894,7 +878,6 @@
     document.getElementById('navDrawer').classList.remove('open');
     document.getElementById('navBurger').classList.remove('open');
   }
-  // Close drawer when clicking outside
   document.addEventListener('click', e => {
     const nav    = document.querySelector('nav');
     const drawer = document.getElementById('navDrawer');
@@ -907,13 +890,6 @@
     const isDark = html.getAttribute('data-theme') === 'dark';
     html.setAttribute('data-theme', isDark ? 'light' : 'dark');
     localStorage.setItem('theme', isDark ? 'light' : 'dark');
-  }
-  const saved = localStorage.getItem('theme');
-  if (saved) {
-  document.documentElement.setAttribute('data-theme', saved);
-  } else {
-  document.documentElement.setAttribute('data-theme', 'light');
-  localStorage.setItem('theme', 'light');
   }
 
   /* ── Email obfuscation ── */
